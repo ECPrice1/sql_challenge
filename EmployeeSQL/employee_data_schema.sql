@@ -1,6 +1,6 @@
 CREATE TABLE departments(
-  dept_no VARCHAR(30)   NOT NULL,
-  dept_name VARCHAR   NOT NULL,
+  dept_no SERIAL   NOT NULL,
+  dept_name VARCHAR(30)  NOT NULL,
   PRIMARY KEY (dept_no)
 );
 
@@ -41,7 +41,6 @@ CREATE TABLE dept_manager(
 CREATE TABLE salaries(
 	emp_no SERIAL   NOT NULL,
     FOREIGN KEY (emp_no) REFERENCES employees(emp_no),
-	salary INT   NOT NULL,
-    PRIMARY KEY (salary)
+	salary INT   NOT NULL
 );
 
